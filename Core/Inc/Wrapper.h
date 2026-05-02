@@ -14,6 +14,7 @@ extern "C"{
 #endif
 
 void* bm_init();
+bool bm_radio_init(void* bm);
 void bm_send(void* bm, const uint8_t* data, uint8_t len);
 void bm_receive(void* bm, uint8_t* buf, uint8_t size);
 
