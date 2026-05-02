@@ -1,0 +1,4 @@
+../Core/Src/BoardManager.cpp:11:1:BoardManager::BoardManager(sx1276*)	1
+../Core/Src/BoardManager.cpp:13:6:bool BoardManager::bm_radio_init()	1
+../Core/Src/BoardManager.cpp:17:6:bool BoardManager::bm_send_packet(const uint8_t*, uint8_t)	1
+../Core/Src/BoardManager.cpp:21:9:uint8_t BoardManager::bm_receive_packet(uint8_t*, uint8_t)	2

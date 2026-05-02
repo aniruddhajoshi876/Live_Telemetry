@@ -1,0 +1,3 @@
+../Core/Src/Wrapper.cpp:15:7:void* bm_init()	1
+../Core/Src/Wrapper.cpp:20:6:void bm_send(void*, const uint8_t*, uint8_t)	1
+../Core/Src/Wrapper.cpp:24:6:void bm_receive(void*, uint8_t*, uint8_t)	1
