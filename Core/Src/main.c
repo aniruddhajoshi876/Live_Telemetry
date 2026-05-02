@@ -95,6 +95,7 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   bm = bm_init();
+  bm_radio_init(bm);
 
   uint8_t rx_buf[8];
 

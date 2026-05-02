@@ -17,6 +17,10 @@ void* bm_init(){
 	return new BoardManager(radio);
 }
 
+bool bm_radio_init(void* bm){
+	return ((BoardManager*) bm)->bm_radio_init();
+}
+
 void bm_send(void* bm, const uint8_t* data, uint8_t len){
 	((BoardManager*) bm)->bm_send_packet(data, len);
 }
