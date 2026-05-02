@@ -341,3 +341,4 @@ The PA boosts the RF signal before the antenna. The SX1276 has two output pins:
 - Use `#pragma pack(1)` or `__attribute__((packed))` on telemetry structs to prevent padding
 - Config registers must only be written in Sleep or Standby mode
 - IRQ flag registers use Write-1-to-Clear - writing `0xFF` clears all flags
+- I have hardcoded to pinouts to make it simple for me, if you want to change it modify in Wrapper.c
