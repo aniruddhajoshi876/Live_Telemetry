@@ -97,6 +97,7 @@ int main(void)
   bm = bm_init();
 
   const uint8_t* tx_buf = (const uint8_t*)"hello\r\n";
+  //uint8_t rx_buf[8];
 
   /* USER CODE END 2 */
 
@@ -105,6 +106,7 @@ int main(void)
   while (1)
   {
 	  bm_send(bm, tx_buf, 7);
+    //bm_receive(bm, rx_buf, 8);
 	  HAL_Delay(500);
 
     /* USER CODE END WHILE */
