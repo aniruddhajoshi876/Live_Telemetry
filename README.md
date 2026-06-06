@@ -10,9 +10,9 @@ LoRa (Long Range) is a spread spectrum modulation technique that intentionally s
 
 Key terms:
 
-- **Chip** - smallest unit of the transmitted waveform
-- **Symbol** - a group of chips; one symbol carries log2(SF) bits
-- **Spreading Factor (SF)** - how many chips represent one symbol. Higher SF = longer range, lower data rate
+- **Chirp** - smallest unit of the transmitted waveform
+- **Symbol** - a group of chirps; one symbol carries log2(SF) bits
+- **Spreading Factor (SF)** - how many chirps represent one symbol. Higher SF = longer range, lower data rate
 - **Bandwidth (BW)** - how wide in frequency the signal is. Wider BW = faster data rate, less range
 - **Coding Rate (CR)** - ratio of data bits to total bits sent. 4/5 = least overhead, 4/8 = most error correction
 - **Sensitivity** - the weakest signal the receiver can still successfully decode
