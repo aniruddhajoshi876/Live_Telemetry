@@ -94,8 +94,13 @@ int main(void)
   MX_SPI1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  HAL_Delay(100);
   bm = bm_init();
-  bm_radio_init(bm);
+  while (!bm_radio_init(bm)){
+	  printf("trying again...\r\n");
+  }
+
+
 
   uint8_t rx_buf[8];
 
@@ -106,7 +111,7 @@ int main(void)
   while (1)
   {
 	  bm_receive(bm, rx_buf, 8);
-
+	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

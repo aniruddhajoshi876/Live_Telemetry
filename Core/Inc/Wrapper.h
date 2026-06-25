@@ -8,6 +8,7 @@
 #ifndef INC_WRAPPER_H_
 #define INC_WRAPPER_H_
 #include <stdint.h>
+#include <stdbool.h>
 
 #ifdef __cplusplus
 extern "C"{

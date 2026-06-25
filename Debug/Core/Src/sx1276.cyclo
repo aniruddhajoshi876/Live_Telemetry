@@ -1,7 +1,7 @@
 ../Core/Src/sx1276.cpp:12:1:sx1276::sx1276(SPI_HandleTypeDef*, GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, uint16_t)	1
 ../Core/Src/sx1276.cpp:18:6:bool sx1276::Lora_init()	2
-../Core/Src/sx1276.cpp:51:9:uint8_t sx1276::readreg(uint8_t)	1
-../Core/Src/sx1276.cpp:60:6:bool sx1276::writereg(uint8_t, uint8_t)	1
-../Core/Src/sx1276.cpp:68:6:bool sx1276::writebuffer(uint8_t, const uint8_t*, uint8_t)	3
-../Core/Src/sx1276.cpp:79:6:bool sx1276::send(const uint8_t*, uint8_t)	5
-../Core/Src/sx1276.cpp:115:9:uint8_t sx1276::RX_cont(uint8_t*, uint8_t)	6
+../Core/Src/sx1276.cpp:58:9:uint8_t sx1276::readreg(uint8_t)	1
+../Core/Src/sx1276.cpp:67:6:bool sx1276::writereg(uint8_t, uint8_t)	1
+../Core/Src/sx1276.cpp:75:6:bool sx1276::writebuffer(uint8_t, const uint8_t*, uint8_t)	3
+../Core/Src/sx1276.cpp:86:6:bool sx1276::send(const uint8_t*, uint8_t)	5
+../Core/Src/sx1276.cpp:122:9:uint8_t sx1276::RX_cont(uint8_t*, uint8_t)	6

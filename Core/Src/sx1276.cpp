@@ -16,15 +16,22 @@ sx1276::sx1276(SPI_HandleTypeDef* hspi, GPIO_TypeDef *nssPort, uint16_t nssPin,
 	}
 
 bool sx1276::Lora_init() {
+
+	uint8_t version = readreg(REG_VERSION); //verify if sx1276 is detected and spi is working
+	if (version != DEF_VERSION) {
+		printf("SX1276 not found! Got 0x%02X\r\n", version);
+		return false;
+	}
+
     // Must be in sleep to switch to LoRa mode
     writereg(REG_OP_MODE, MODE_SLEEP);
     HAL_Delay(10);
 
-    uint8_t version = readreg(REG_VERSION); //verify if sx1276 is detected and spi is working
-    if (version != DEF_VERSION) {
-        printf("SX1276 not found! Got 0x%02X\r\n", version);
-        return false;
-    }
+
+
+
+    printf("Lora Module detected!\r\n");
+
 
 
     // Switch to LoRa mode
@@ -32,7 +39,7 @@ bool sx1276::Lora_init() {
     HAL_Delay(10);
 
     // Set frequency to 915 MHz
-    uint32_t frf = (uint32_t)(915e6 / 61.035);  // Fstep = Fxosc/2^19 = 61.035 Hz
+    uint32_t frf = (uint32_t)(433e6 / 61.035);  // Fstep = Fxosc/2^19 = 61.035 Hz
     writereg(REG_FRF_MSB, (frf >> 16) & 0xFF);
     writereg(REG_FRF_MID, (frf >> 8)  & 0xFF);
     writereg(REG_FRF_LSB, (frf >> 0)  & 0xFF);
